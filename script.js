@@ -127,7 +127,7 @@ let runGame = function () {
   checkDuplicate(selectedWord);
   createBlank(selectedWord);
   writeToDom([], wordBlank, guesses);
-  alertMessage.textContent = "";
+  alertMessage.textContent = "Press any letter to begin guessing!";
   console.log('game is running');
 }
 
