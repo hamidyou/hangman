@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -25,15 +25,15 @@
     <div class="row pt-5">
       <div class="col-md-2 offset-md-3">
         <h4>WINS</h4>
-        <p id="wins"></p>
+        <p id="wins">0</p>
       </div>
       <div class="col-md-2">
         <h4>LOSSES</h4>
-        <p id="losses"></p>
+        <p id="losses">0</p>
       </div>
       <div class="col-md-2">
         <h4>PERCENTAGE</h4>
-        <p id="percentage"></p>
+        <p id="percentage">0%</p>
       </div>
     </div>
   </header>
@@ -41,19 +41,19 @@
 
   <main class="container">
     <div class="row mb-3">
-      <div class="col-md-3 offset-md-3 text-center">
+      <div class="col-md-3 offset-md-3 offset-sm-0 col-sm-6 text-center my-2">
         <button type="button" class="btn btn-success" onclick="runGame()" id="playBtn">PLAY</button>
       </div>
-      <div class="col-md-3 text-center">
+      <div class="col-md-3 col-sm-6 text-center my-2">
         <button type="button" class="btn btn-success" onclick="reset()" id="reset">RESET</button>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3 text-center">
+      <div class="col-md-4 col-sm-4 text-center my-2">
         <div class="card text-center">
           <div class="card-header">
             <div class="card-title">
-              <h4>Letters Guessed</h4>
+              <h5>Letters Guessed</h5>
             </div>
           </div>
           <div class="card-body">
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 text-center">
+      <div class="col-md-4 col-sm-4 text-center my-2">
         <div class="card text-center">
           <div class="card-header">
             <div class="card-title">
@@ -71,16 +71,22 @@
           <div class="card-body">
             <p class="card-text" id="selWord"></p>
           </div>
-          <div class="card-footer text-muted" id="alertMessage">
+          <div class="card-footer text-danger" id="alertMessage">
             Press Play to Begin
           </div>
+          <audio id="correct">
+            <source src="assets/audio/soundsilk-Correct-Answer-Soundeffect.mp3" type="audio/mpeg">
+          </audio>
+          <audio id="wrong">
+            <source src="assets/audio/Cartoon_Boing.mp3" type="audio/mpeg">
+          </audio>
         </div>
       </div>
-      <div class="col-md-3 text-center">
+      <div class="col-md-4 col-sm-4 text-center my-2">
         <div class="card text-center">
           <div class="card-header">
             <div class="card-title">
-              <h4>Guesses Remaining</h4>
+              <h5>Guesses Remaining</h5>
             </div>
           </div>
           <div class="card-body">
@@ -93,6 +99,6 @@
 
 </body>
 
-<script src="script.js"></script>
+<script src="assets/js/script.js"></script>
 
 </html>
