@@ -154,7 +154,7 @@ document.onkeyup = function (event) {
     selWord.textContent = "Click 'PLAY' to get another word";
     return false;
   }
-  let regEx = /[a-zA-Z]/
+  let regEx = /^[a-z]$/i
   let key = event.key.toLowerCase();
   if (or(!regEx.test(key), includes(illegal, key))) {
     alertMessage.textContent = "That isn't even a letter...minus 2 guesses."
